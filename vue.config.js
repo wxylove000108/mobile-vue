@@ -7,6 +7,7 @@ const {
 } = require('unplugin-vue-components/resolvers')
 
 module.exports = {
+    publicPath: "./",
     configureWebpack() {
         return {
             resolve: {
