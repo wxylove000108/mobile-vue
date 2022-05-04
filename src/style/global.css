@@ -1,0 +1,17 @@
+@import './flex.css';
+body {
+    transition: background-color .25s;
+    color: var(--color-text);
+    background-color: var(--color-body);
+}
+
+html,
+body,
+#app {
+    width: 100vw;
+    height: 100vh;
+}
+
+.var-app-bar {
+    height: 60px;
+}

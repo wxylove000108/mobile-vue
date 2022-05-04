@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+}
+
+.flex-warp {
+    flex-wrap: wrap;
+}
+
+.flex-d {
+    flex-direction: column;
+}
+
+.flex-s {
+    flex: 1 1 0%;
+}
