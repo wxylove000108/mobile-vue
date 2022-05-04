@@ -3,9 +3,6 @@ import { RouterView, RouterLink, useRouter } from "vue-router";
 import leftPopupMenu from "@/components/leftPopupMenu/index";
 
 export default defineComponent({
-  components: {
-    leftPopupMenu,
-  },
   setup() {
     const show = ref(false);
     return () => (
@@ -21,7 +18,7 @@ export default defineComponent({
         </w-layout>
 
         {/* 全局侧边弹窗 */}
-        <leftPopupMenu onClose={ (v) => show.value = v } show={ show.value }/>
+        <leftPopupMenu onClose={ (v) => show.value = v } show={ show.value }></leftPopupMenu>
       </>
     );
   },

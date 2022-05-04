@@ -2,7 +2,6 @@ import {
   defineComponent,
   h,
 } from "vue";
-import { Home } from "@icon-park/vue-next";
 export default defineComponent({
   props: {
     icon: String | Object,
