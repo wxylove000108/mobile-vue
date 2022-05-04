@@ -8,7 +8,7 @@ export default defineComponent({
     console.log(props);
     return () => (
       <div className="search_bar">
-        <var-swipe vertical autoplay="3000" indicator={false} touchable={false}>
+        <var-swipe vertical autoplay="3000" indicator={false} touchable={false} duration='800'>
           {props.searchList.map((song) => (
             <var-swipe-item>
               <span>{song.songer}</span>

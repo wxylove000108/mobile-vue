@@ -43,7 +43,7 @@ export default defineComponent({
         <div className="content">
           {/* 轮播区域 */}
           <div className="banner">
-            <var-swipe autoplay={3000}>
+            <var-swipe autoplay={3000} duration='800'>
               {bannerList.value.map((item) => (
                 <var-swipe-item>
                   <img src={item.pic} alt="" />
