@@ -10,6 +10,7 @@ export default defineComponent({
   setup() {
     return () => <div>
       <Icon icon={ Home } fill='#000' size='30'></Icon>
+      <div>111</div>
     </div>;
   },
 });
