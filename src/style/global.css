@@ -3,13 +3,14 @@ body {
     transition: background-color .25s;
     color: var(--color-text);
     background-color: var(--color-body);
+    overscroll-behavior-y: none;
 }
 
 html,
 body,
 #app {
-    width: 100vw;
-    height: 100vh;
+    width: 100;
+    height: 100%;
 }
 
 .var-app-bar {
