@@ -10,7 +10,7 @@ export default defineComponent({
     //     },
     //     { passive: false }
     //   ); //passive 参数不能省略，用来兼容ios和android
-    // });
+    });
     return () => <RouterView></RouterView>;
   },
 });
