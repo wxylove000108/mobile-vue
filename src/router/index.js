@@ -2,7 +2,10 @@ import {
     createRouter,
     createWebHashHistory
 } from 'vue-router'
-import { AlignTextLeft, MusicMenu } from "@icon-park/vue-next";
+import {
+    AlignTextLeft,
+    MusicMenu
+} from "@icon-park/vue-next";
 
 import Layout from '@/Layout/index.jsx'
 

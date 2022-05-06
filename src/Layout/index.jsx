@@ -5,6 +5,7 @@ import leftPopupMenu from "@/components/leftPopupMenu/index";
 export default defineComponent({
   setup() {
     const show = ref(false);
+
     return () => (
       <>
         <w-layout>

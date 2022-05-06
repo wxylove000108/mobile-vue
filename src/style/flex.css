@@ -13,3 +13,11 @@
 .flex-s {
     flex: 1 1 0%;
 }
+
+.al {
+    align-items: center;
+}
+
+.jc-b {
+    justify-content: space-between;
+}

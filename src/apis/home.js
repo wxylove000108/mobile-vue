@@ -15,3 +15,13 @@ export function getRecommendList(data) {
         data
     })
 }
+
+
+// /toplist
+export function getRankingList(data) {
+    return request({
+        method: 'POST',
+        url: '/top/playlist',
+        data
+    })
+}
