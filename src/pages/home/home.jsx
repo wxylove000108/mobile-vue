@@ -119,8 +119,6 @@ export default defineComponent({
               },
             }}
           </var-card>
-
-          <div style={{height:'400px'}}></div>
         </div>
       </div>
     );
