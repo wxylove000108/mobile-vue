@@ -39,24 +39,26 @@ export default defineComponent({
         };
         topList.value.push(list);
       }
+
+      console.log(topList.value);
     };
 
     //去除特殊字符~!@#$^-&*()=|{}':;',\[].<>/?~！@#￥……&*（）——|{}【】'；：""'。，、？
-  function trimSpecial(string) {
-
-  //替换字符串中的所有特殊字符（包含空格）
-  if(string!= ""){
-    const pattern=/[`~「」!@#$^\-&*()=|{}':;',\\\[\]\.<>\/?~！@#￥……&*（）——|{}【】'；：""'。，、？\s]/g;
-    string = string.replace(pattern,"");
-  }
-  return string
-}
-
+    function trimSpecial(string) {
+      //替换字符串中的所有特殊字符（包含空格）
+      if (string != "") {
+        const pattern =
+          /[`~「」!@#$^\-&*()=|{}':;',\\\[\]\.<>\/?~！@#￥……&*（）——|{}【】'；：""'。，、？\s]/g;
+        string = string.replace(pattern, "");
+      }
+      return string;
+    }
 
     onMounted(() => {
       bs = new BScroll(wrapper.value, {
         scrollX: true,
         scrollY: false, // 忽略竖直方向的滚动
+        eventPassthrough:'vertical'
       });
       getBannerList();
       getRecommendData();
@@ -119,7 +121,9 @@ export default defineComponent({
                             <div className="swiper-item">
                               <div className="music-item flex al">
                                 <img src={song.coverImgUrl} alt="" />
-                                <div className="song-name">{trimSpecial(song.name)}</div>
+                                <div className="song-name">
+                                  {trimSpecial(song.name)}
+                                </div>
                               </div>
                             </div>
                           ))}
