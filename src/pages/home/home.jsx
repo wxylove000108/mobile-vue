@@ -77,7 +77,7 @@ export default defineComponent({
                   return (
                     <>
                       <div className="banner">
-                        <var-swipe duration="800" loop={false}>
+                        <var-swipe duration="800" autoplay="2000">
                           {bannerList.value.map((item) => (
                             <var-swipe-item>
                               <img src={item.pic} alt="" />

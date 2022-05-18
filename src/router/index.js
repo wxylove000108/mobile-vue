@@ -10,30 +10,38 @@ import {
 import Layout from '@/Layout/index.jsx'
 
 const routes = [{
-    path: '/',
-    name: 'Layout',
-    component: Layout,
-    redirect: '/home',
-    children: [{
-        path: 'home',
-        name: 'Home',
-        meta: {
-            navBarLeftIcon: AlignTextLeft,
-            navBarRightIcon: MusicMenu,
-            navBarComponent: 'navBarCenter'
-        },
+        path: '/',
+        name: 'Layout',
+        component: Layout,
+        redirect: '/home',
+        children: [{
+            path: 'home',
+            name: 'Home',
+            meta: {
+                navBarLeftIcon: AlignTextLeft,
+                navBarRightIcon: MusicMenu,
+                navBarComponent: 'navBarCenter'
+            },
+            component: () =>
+                import ('@/pages/home/home')
+        }, {
+            path: 'my',
+            name: 'My',
+            meta: {
+                navBarLeftIcon: AlignTextLeft,
+            },
+            component: () =>
+                import ('@/pages/my/my')
+        }]
+    },
+
+    {
+        path: '/login',
+        name: 'Login',
         component: () =>
-            import ('@/pages/home/home')
-    }, {
-        path: 'my',
-        name: 'My',
-        meta: {
-            navBarLeftIcon: AlignTextLeft,
-        },
-        component: () =>
-            import ('@/pages/my/my')
-    }]
-}, ]
+            import ('@/pages/login/login')
+    }
+]
 
 const router = createRouter({
     history: createWebHashHistory(),
